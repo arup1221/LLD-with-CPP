@@ -1,0 +1,38 @@
+ABSTRACTION vs ENCAPSULATION
+============================
+
+Abstraction
+-----------
+- Hiding complexity: show WHAT an object does, hide HOW it does it.
+- Solves the problem at the DESIGN level.
+- Achieved using abstract classes (pure virtual functions) and interfaces.
+- Focus: exposing only essential features to the user.
+- Example: a Car exposes start() and accelerate(); the user doesn't need to
+  know how the engine works internally.
+
+Encapsulation
+-------------
+- Hiding data: bundle data and the methods that operate on it into one unit
+  (class) and restrict direct access to it.
+- Solves the problem at the IMPLEMENTATION level.
+- Achieved using access specifiers (private, protected, public) with
+  getters/setters.
+- Focus: protecting data from unwanted/unauthorized modification.
+- Example: a BankAccount keeps 'balance' private; it can only be changed
+  through deposit() and withdraw().
+
+Key Differences
+---------------
+| Point            | Abstraction                         | Encapsulation                         |
+|------------------|-------------------------------------|---------------------------------------|
+| Meaning          | Hiding implementation complexity    | Hiding/wrapping data with methods     |
+| Level            | Design level                        | Implementation level                  |
+| Goal             | Show only essential details         | Protect data, control access          |
+| Achieved by      | Abstract classes, interfaces        | Access specifiers, getters/setters    |
+| Focus            | What an object does                 | How data is kept safe                 |
+| Result           | Reduces complexity                  | Improves security and maintainability |
+
+One-line summary
+----------------
+Abstraction hides complexity (what to show); Encapsulation hides data
+(how to protect it).
