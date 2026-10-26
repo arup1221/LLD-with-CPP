@@ -10,7 +10,7 @@
 
 </div>
 
-> 🚧 **Work in progress.** This repository is just getting started — only the first OOP example exists today.
+> 🚧 **Work in progress.** The OOP fundamentals module is complete — SOLID principles are up next.
 > New topics are added regularly, and it will grow into a **complete LLD course in C++**. Star/watch the repo to follow along!
 
 ---
@@ -33,7 +33,7 @@ The goal is to cover the full LLD path:
 
 | # | Module | Topics | Status |
 |---|--------|--------|:------:|
-| 1 | [OOPS](OOPS/) | Abstraction, Encapsulation, Inheritance, Polymorphism | 🚧 In progress |
+| 1 | [OOPS](OOPS/) | Abstraction, Encapsulation, Inheritance, Polymorphism (static & dynamic) | ✅ Done |
 | 2 | SOLID Principles | SRP, OCP, LSP, ISP, DIP | ⏳ Planned |
 | 3 | Creational Patterns | Singleton, Factory, Abstract Factory, Builder, Prototype | ⏳ Planned |
 | 4 | Structural Patterns | Adapter, Decorator, Facade, Proxy, Composite | ⏳ Planned |
@@ -49,7 +49,16 @@ Legend: ✅ Done · 🚧 In progress · ⏳ Planned
 ```text
 LLD with CPP/
 ├── OOPS/
-│   └── Abstraction.cpp     # Abstract class (Car) vs concrete class (SportsCar)
+│   ├── Abstraction.cpp                   # Abstract class (Car) vs concrete class (SportsCar)
+│   ├── Encapsulation.cpp                 # Private state in SportsCar, accessed only via methods
+│   ├── Inheritance.cpp                   # ManualCar & ElectricCar reuse common behaviour from Car
+│   ├── StaticPolymorphism.cpp            # Compile-time: overloaded accelerate() in ManualCar
+│   ├── DynamicPolymorphism.cpp           # Runtime: virtual overrides called through a Car* pointer
+│   ├── StaticAndDynamicPolymorphism.cpp  # Overloading + overriding combined in one hierarchy
+│   └── notes.txt                         # Abstraction vs Encapsulation comparison notes
+├── .github/
+│   └── CODEOWNERS
+├── CLAUDE.md
 ├── LICENSE
 └── README.md
 ```
@@ -61,7 +70,11 @@ LLD with CPP/
 ## 🧭 How to Use This Repo
 
 1. Read the comments at the top of each file — they explain the concept with a real-world analogy.
-2. Compile and run the code.
+2. Compile and run the code. Each file is a standalone program, for example:
+   ```sh
+   g++ -std=c++17 OOPS/Inheritance.cpp -o OOPS/Inheritance.exe
+   ./OOPS/Inheritance.exe
+   ```
 3. Experiment locally on your own machine to understand how it works.
 4. Move to the next topic in the roadmap.
 
